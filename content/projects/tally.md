@@ -5,7 +5,7 @@ discipline: "Full-stack / Auth"
 summary: "A polished landing page with a real, secured product behind it — signups, auth, and a gated dashboard where users only ever see their own data."
 platform: "Lovable"
 stack: "Lovable, Supabase (Postgres, Auth, Row Level Security)"
-demo: ""
+demo: "https://tally-demo.lovable.app/"
 repo: ""
 hero_image: ""
 ---
