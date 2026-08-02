@@ -5,7 +5,7 @@ discipline: "Design / Front-end"
 summary: "A type specimen where the concept and the interaction are the same thing: drag a 'depth' axis and the letterforms sink underwater."
 platform: "v0"
 stack: "v0, variable font, CSS variable-font axes"
-demo: ""
+demo: "https://tidal-navy.vercel.app/"
 repo: ""
 hero_image: ""
 ---
