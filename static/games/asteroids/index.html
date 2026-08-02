@@ -1,0 +1,50 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>ASTEROIDS</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="./src/style.css" />
+</head>
+<body>
+  <div class="frame">
+    <header class="hud">
+      <div class="hud-score">SCORE <span id="score">0</span></div>
+      <div class="hud-title">ASTEROIDS</div>
+      <div class="hud-lives" id="lives"></div>
+    </header>
+
+    <div class="stage">
+      <canvas id="game" width="800" height="600"></canvas>
+
+      <!-- Overlays -->
+      <div class="overlay" id="overlay-start">
+        <h1 class="glow">ASTEROIDS</h1>
+        <p class="sub">Rotate <kbd>&larr;</kbd> <kbd>&rarr;</kbd> &nbsp; Thrust <kbd>&uarr;</kbd> &nbsp; Fire <kbd>Space</kbd> &nbsp; Hyperspace <kbd>Shift</kbd></p>
+        <button class="btn" id="btn-start">INSERT COIN</button>
+      </div>
+
+      <div class="overlay hidden" id="overlay-over">
+        <h1 class="glow">GAME OVER</h1>
+        <p class="sub">Final score <span id="final-score">0</span></p>
+        <div class="entry" id="entry">
+          <label for="initials">Enter initials</label>
+          <input id="initials" maxlength="3" autocomplete="off" spellcheck="false" placeholder="AAA" />
+          <button class="btn" id="btn-submit">SUBMIT</button>
+        </div>
+        <p class="entry-status hidden" id="entry-status"></p>
+        <button class="btn btn-ghost" id="btn-again">PLAY AGAIN</button>
+      </div>
+    </div>
+
+    <aside class="board">
+      <h2>HIGH SCORES</h2>
+      <ol id="leaderboard"><li class="loading">loadingâ€¦</li></ol>
+    </aside>
+  </div>
+  <script type="module" src="./src/main.js"></script>
+</body>
+</html>

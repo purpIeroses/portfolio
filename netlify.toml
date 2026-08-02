@@ -15,3 +15,12 @@
     X-Frame-Options = "DENY"
     X-Content-Type-Options = "nosniff"
     Referrer-Policy = "strict-origin-when-cross-origin"
+
+# Asteroids is embedded same-origin in the project case study — allow
+# framing here (SAMEORIGIN), overriding the site-wide DENY above.
+[[headers]]
+  for = "/games/*"
+  [headers.values]
+    X-Frame-Options = "SAMEORIGIN"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"

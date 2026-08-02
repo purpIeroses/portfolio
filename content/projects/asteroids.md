@@ -5,10 +5,15 @@ discipline: "Interactive / Game"
 summary: "A faithful vector arcade clone with a real global leaderboard — built to prove I can ship interactive work and secure the backend behind it."
 platform: "Vanilla JS + Canvas"
 stack: "HTML5 Canvas, ES modules, Supabase (Postgres + RLS)"
-demo: ""   # paste your live URL
+demo: "/games/asteroids/"
 repo: ""   # paste your repo URL
 hero_image: ""  # e.g. images/asteroids-hero.png
 ---
+
+<div class="case-embed">
+  <iframe src="/games/asteroids/" title="Asteroids — play in browser" loading="lazy"></iframe>
+  <p class="case-embed-cta"><a href="/games/asteroids/" target="_blank" rel="noopener">Open full screen ↗</a></p>
+</div>
 
 ## What it is
 

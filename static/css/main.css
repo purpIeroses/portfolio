@@ -140,6 +140,26 @@ a { color: inherit; text-decoration: none; }
 .case-hero { margin: 0 0 40px; border: 1px solid var(--line); border-radius: 4px; overflow: hidden; }
 .case-hero img { width: 100%; display: block; }
 
+/* ── playable embed ──────────────────────────────────────────
+   The case column (~712px) is narrower than the game's own 720px
+   breakpoint, so it always renders in stacked mode (hud/stage/board) —
+   a fixed height fits that reliably, no aspect-ratio math needed. */
+.case-embed { margin: 36px 0 44px; }
+.case-embed iframe {
+  display: block;
+  width: 100%;
+  height: 900px;
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  background: #05060a;
+}
+.case-embed-cta { text-align: center; margin-top: 10px; }
+.case-embed-cta a { font-size: 13px; font-weight: 600; color: var(--accent); }
+.case-embed-cta a:hover { text-decoration: underline; }
+@media (max-width: 480px) {
+  .case-embed iframe { height: 760px; }
+}
+
 .case-body { font-size: 17px; }
 .case-body h2 { font-family: var(--display); font-weight: 900; font-size: 27px; letter-spacing: -0.01em; margin: 42px 0 14px; }
 .case-body h3 { font-weight: 600; font-size: 19px; margin: 30px 0 10px; }
