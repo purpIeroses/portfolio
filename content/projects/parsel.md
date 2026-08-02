@@ -5,7 +5,7 @@ discipline: "AI Integration"
 summary: "Paste a messy job posting, get clean structured data — every time. An AI feature built around the hard part: making model output trustworthy."
 platform: "Bolt.new"
 stack: "Bolt.new, LLM API, Zod validation, serverless route"
-demo: ""
+demo: "https://parsel-demo.bolt.host/"
 repo: ""
 hero_image: ""
 ---
