@@ -1,0 +1,17 @@
+# Netlify deploy config. If you use Netlify instead of Cloudflare, this is all
+# you need — connect the repo and Netlify reads this.
+[build]
+  publish = "public"
+  command = "hugo --gc --minify"
+
+[build.environment]
+  # Pin to the Hugo version you develop against to avoid CI build drift.
+  HUGO_VERSION = "0.163.3"
+  HUGO_ENV = "production"
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"

@@ -1,0 +1,10 @@
+<footer class="footer" id="contact">
+  <div class="footer-inner">
+    <p class="footer-cta">Have something that needs building?</p>
+    <p class="footer-links">
+      <a href="mailto:{{ .Site.Params.email }}">{{ .Site.Params.email }}</a>
+      {{ with .Site.Params.github }}<span>·</span><a href="{{ . }}">GitHub</a>{{ end }}
+    </p>
+    <p class="footer-fine">© {{ now.Year }} {{ .Site.Params.author }}. Built with Hugo.</p>
+  </div>
+</footer>

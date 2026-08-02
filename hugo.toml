@@ -1,0 +1,38 @@
+baseURL = "https://sophianawasreh.com/"
+languageCode = "en-us"
+title = "Sophia Al-Nawasreh — Builder"
+enableRobotsTXT = true
+
+# Pin this to match the Hugo version your host builds with (see deploy guide).
+# Cloudflare/Netlify read HUGO_VERSION from an env var, not from here — this is
+# just a reminder of the version you developed against.
+# Developed against: Hugo extended 0.164.x
+
+[params]
+  description = "I ship working products fast — then harden them. Freelance builder working across game dev, full-stack, AI integration, and design."
+  author = "Sophia Al-Nawasreh"
+  email = "sophiaalnawasreh@gmail.com"
+  # social — fill or delete
+  github = "https://github.com/purpIeroses"
+  # tagline shown in the hero
+  tagline = "I ship working products fast — then make them hold up."
+
+[menu]
+  [[menu.main]]
+    name = "Work"
+    url = "/#work"
+    weight = 1
+  [[menu.main]]
+    name = "About"
+    url = "/#about"
+    weight = 2
+  [[menu.main]]
+    name = "Contact"
+    url = "/#contact"
+    weight = 3
+
+[markup.goldmark.renderer]
+  unsafe = true  # allow raw HTML in markdown (for embeds/screenshots)
+
+[build]
+  writeStats = false

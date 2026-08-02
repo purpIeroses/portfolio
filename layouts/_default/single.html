@@ -1,0 +1,32 @@
+{{ define "main" }}
+<article class="case">
+  <a class="case-back" href="{{ "/#work" | relURL }}">← All work</a>
+
+  <header class="case-head">
+    <div class="case-tag">{{ .Params.discipline }}</div>
+    <h1>{{ .Title }}</h1>
+    <p class="case-summary">{{ .Params.summary }}</p>
+    <dl class="case-facts">
+      <div><dt>Platform</dt><dd>{{ .Params.platform }}</dd></div>
+      <div><dt>Stack</dt><dd>{{ .Params.stack }}</dd></div>
+      {{ with .Params.demo }}<div><dt>Live</dt><dd><a href="{{ . }}">View demo →</a></dd></div>{{ end }}
+      {{ with .Params.repo }}<div><dt>Code</dt><dd><a href="{{ . }}">Repository →</a></dd></div>{{ end }}
+    </dl>
+  </header>
+
+  {{ with .Params.hero_image }}
+  <figure class="case-hero">
+    <img src="{{ . | relURL }}" alt="{{ $.Title }} screenshot">
+  </figure>
+  {{ end }}
+
+  <div class="case-body">
+    {{ .Content }}
+  </div>
+
+  <nav class="case-nav">
+    <a href="{{ "/#work" | relURL }}">← Back to all work</a>
+    <a href="{{ "/#contact" | relURL }}">Start a project →</a>
+  </nav>
+</article>
+{{ end }}

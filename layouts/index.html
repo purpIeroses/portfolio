@@ -1,0 +1,47 @@
+{{ define "main" }}
+<section class="hero">
+  <div class="hero-inner">
+    <p class="hero-eyebrow">FREELANCE BUILDER</p>
+    <h1 class="hero-title">{{ .Site.Params.tagline }}</h1>
+    <p class="hero-sub">{{ .Site.Params.description }}</p>
+    <div class="hero-actions">
+      <a class="btn" href="#work">See the work</a>
+      <a class="btn btn-ghost" href="#contact">Get in touch</a>
+    </div>
+  </div>
+</section>
+
+<section class="work" id="work">
+  <div class="section-head">
+    <span class="section-num">01</span>
+    <h2>Selected work</h2>
+    <p>Four builds, four different problems. Each one shipped, then hardened.</p>
+  </div>
+
+  <div class="cards">
+    {{ range (where .Site.RegularPages "Section" "projects").ByWeight }}
+    <a class="card" href="{{ .RelPermalink }}">
+      <div class="card-tag">{{ .Params.discipline }}</div>
+      <h3 class="card-title">{{ .Title }}</h3>
+      <p class="card-blurb">{{ .Params.summary }}</p>
+      <div class="card-meta">
+        <span>{{ .Params.platform }}</span>
+        <span class="card-arrow">→</span>
+      </div>
+    </a>
+    {{ end }}
+  </div>
+</section>
+
+<section class="about" id="about">
+  <div class="section-head">
+    <span class="section-num">02</span>
+    <h2>How I work</h2>
+  </div>
+  <div class="about-body">
+    <p>I come from game programming — C++, Unity, the kind of work where the thing either runs at 60 frames a second or it doesn't. That habit of caring whether something actually <em>works</em> is what I bring to everything else.</p>
+    <p>I use AI-assisted tools to move fast, but speed isn't the pitch. The pitch is judgment: knowing what the fast path skips, and fixing it before it ships. On the projects here, that meant catching a leaderboard that trusted the client, an auth setup that only <em>looked</em> gated, and an AI feature that would break the moment someone pasted the wrong thing.</p>
+    <p>Fast to a working prototype. Careful about the part that matters.</p>
+  </div>
+</section>
+{{ end }}
