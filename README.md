@@ -70,26 +70,7 @@ edit the wording.
 
 ---
 
-## 3. AI-assisted customization
-
-Hugo's Go templating has a learning curve; this is where an AI *coding* tool
-(Cursor or Claude Code) earns its keep — not a prompt-to-app builder, since this
-is a real codebase. Useful prompts once you open the folder in Cursor:
-
-- "In this Hugo site, add a dark-mode toggle that respects prefers-color-scheme,
-  using CSS variables already defined in static/css/main.css."
-- "Add a subtle scroll-reveal animation to the .card elements, respecting
-  prefers-reduced-motion."
-- "Add an RSS feed and a proper sitemap.xml to this Hugo site."
-- "Make the hero headline use a variable-font weight animation on load."
-- "Add Open Graph images per case study using Hugo's image processing."
-
-Ask it to explain the Hugo templating as it goes — you'll be able to maintain the
-site yourself after.
-
----
-
-## 4. Deploy free — Cloudflare Pages (recommended)
+## 3. Deploy free — Cloudflare Pages (recommended)
 
 Why Cloudflare: unlimited bandwidth on the free tier, so if a case study gets
 shared around while you're pitching, there are no surprise overage charges. Free
@@ -128,7 +109,7 @@ its free tier meters bandwidth where Cloudflare doesn't. Either is a solid choic
 
 ---
 
-## 5. How the pieces fit together
+## 4. How the pieces fit together
 
 Your four prototypes are separate apps — some interactive JS, some living on
 their own platforms. This Hugo site is the **hub**, not the host:
@@ -144,7 +125,7 @@ as each goes live.
 
 ---
 
-## 6. Before you call it shipped
+## 5. Before you call it shipped
 
 - [ ] All `demo:` and `repo:` links filled or removed (empty ones just hide).
 - [ ] A real screenshot on each case study (`hero_image:`), especially Tidal —
@@ -158,7 +139,7 @@ as each goes live.
 
 ---
 
-## 7. Honest notes
+## 6. Honest notes
 
 - The design here is intentionally restrained so it doesn't compete with Tidal.
   If you want the hub itself flashier, that's a valid choice — just keep it
@@ -170,4 +151,3 @@ as each goes live.
   engineering judgment behind each build — edit freely, but keep that angle,
   because it's what actually differentiates you from someone just shipping
   prompts.
-```
