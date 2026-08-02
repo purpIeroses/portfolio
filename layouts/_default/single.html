@@ -9,8 +9,8 @@
     <dl class="case-facts">
       <div><dt>Platform</dt><dd>{{ .Params.platform }}</dd></div>
       <div><dt>Stack</dt><dd>{{ .Params.stack }}</dd></div>
-      {{ with .Params.demo }}<div><dt>Live</dt><dd><a href="{{ . }}">View demo →</a></dd></div>{{ end }}
-      {{ with .Params.repo }}<div><dt>Code</dt><dd><a href="{{ . }}">Repository →</a></dd></div>{{ end }}
+      {{ with .Params.demo }}<div><dt>Live</dt><dd><a href="{{ . }}" target="_blank" rel="noopener">View demo →</a></dd></div>{{ end }}
+      {{ with .Params.repo }}<div><dt>Code</dt><dd><a href="{{ . }}" target="_blank" rel="noopener">Repository →</a></dd></div>{{ end }}
     </dl>
   </header>
 
