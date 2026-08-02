@@ -2,7 +2,7 @@
 title: "This Site"
 weight: 5
 discipline: "Full-stack / Infra"
-summary: "The portfolio you're looking at right now — hand-coded in Hugo, not assembled in a drag-and-drop builder, and deployed through a live platform migration."
+summary: "The portfolio you're looking at right now — built in Hugo, not assembled in a drag-and-drop builder, and deployed through a live platform migration."
 platform: "Hugo (static site generator)"
 stack: "Hugo + Go templates, Cloudflare Workers (static assets), GitHub, DigitalPlat free domain"
 demo: "https://sophianawasreh.dpdns.org/"
@@ -13,10 +13,10 @@ hero_image: ""
 ## What it is
 
 This case study is the site itself. No Squarespace, no Webflow, no template
-marketplace — a Hugo project with hand-written layouts, a custom Go-template
-homepage and case-study page, and CSS written from scratch. The other four
-projects show what I can build; this one shows how I actually ship and host
-something, end to end.
+marketplace — a Hugo project with custom layouts, a Go-template homepage and
+case-study page, and CSS written from scratch. The other four projects show
+what I can build; this one shows how I actually ship and host something, end
+to end.
 
 ## Why this one
 
@@ -30,7 +30,7 @@ someone else's engineering. This one is mine.
 Hugo over a JS framework because a portfolio is content, not an app — static
 generation means no client-side routing bugs, no hydration cost, and a build
 that's fast enough to iterate on instantly. The homepage and case-study
-templates are hand-written `baseof`/`single`/`index` layouts using Hugo's Go
+templates are custom `baseof`/`single`/`index` layouts using Hugo's Go
 templating rather than a downloaded theme, so every section — hero, work grid,
 about — is exactly as opinionated as I want it.
 
@@ -50,11 +50,6 @@ up being the real engineering story:
   DigitalPlat, delegated it to Cloudflare via external nameservers (not
   DigitalPlat's own DNS), and waited out real-world nameserver propagation
   rather than assuming it "just works."
-- **Debugged in production**: hit and diagnosed a `522` on the `www` subdomain
-  (Cloudflare reaching a dead origin) and fixed it with an edge redirect rule
-  instead of duplicating the site under a second hostname — the redirect
-  intercepts the request before Cloudflare ever tries to reach an origin, so
-  there's nothing left to time out.
 
 ## The takeaway
 
