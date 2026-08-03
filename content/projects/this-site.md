@@ -6,6 +6,7 @@ summary: "The portfolio you're looking at right now — built in Hugo, not assem
 platform: "Hugo (static site generator)"
 stack: "Hugo + Go templates, Cloudflare Workers (static assets), GitHub, DigitalPlat free domain"
 demo: "https://sophianawasreh.dpdns.org/"
+demo_label: "You're looking at it!"
 repo: "https://github.com/purpIeroses/portfolio"
 ---
 

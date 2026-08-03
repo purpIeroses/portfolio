@@ -6,10 +6,14 @@
     <div class="case-tag">{{ .Params.discipline }}</div>
     <h1>{{ .Title }}</h1>
     <p class="case-summary">{{ .Params.summary }}</p>
+
+    {{ with .Params.demo }}
+    <a class="btn case-demo-btn" href="{{ . }}" target="_blank" rel="noopener">{{ $.Params.demo_label | default "View live demo →" }}</a>
+    {{ end }}
+
     <dl class="case-facts">
       <div><dt>Platform</dt><dd>{{ .Params.platform }}</dd></div>
       <div><dt>Stack</dt><dd>{{ .Params.stack }}</dd></div>
-      {{ with .Params.demo }}<div><dt>Live</dt><dd><a href="{{ . }}" target="_blank" rel="noopener">View demo →</a></dd></div>{{ end }}
       {{ with .Params.repo }}<div><dt>Code</dt><dd><a href="{{ . }}" target="_blank" rel="noopener">Repository →</a></dd></div>{{ end }}
     </dl>
   </header>
