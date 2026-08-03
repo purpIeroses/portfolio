@@ -1,7 +1,9 @@
 {
   "name": "portfolio",
   "compatibility_date": "2026-08-02",
+  "main": "worker/index.js",
   "assets": {
-    "directory": "public"
+    "directory": "public",
+    "binding": "ASSETS"
   }
 }

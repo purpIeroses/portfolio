@@ -26,7 +26,7 @@
 
   <nav class="case-nav">
     <a href="{{ "/#work" | relURL }}">← Back to all work</a>
-    <a href="{{ "/#contact" | relURL }}">Start a project →</a>
+    <a href="mailto:{{ .Site.Params.email }}">Start a project →</a>
   </nav>
 </article>
 {{ end }}

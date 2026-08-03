@@ -15,5 +15,8 @@ node_modules/
 # Claude Code local settings
 .claude/settings.local.json
 
+# Wrangler local state (contains account info)
+.wrangler/
+
 # Working assets, not part of the site
 /reference assets/
