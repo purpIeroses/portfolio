@@ -7,7 +7,7 @@ platform: "Bolt.new"
 stack: "Bolt.new, LLM API, Zod validation, serverless route"
 demo: "https://parsel-demo.bolt.host/"
 repo: ""
-hero_image: ""
+hero_image: "images/parsel-hero.png"
 ---
 
 ## What it is

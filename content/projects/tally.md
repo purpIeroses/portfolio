@@ -7,7 +7,7 @@ platform: "Lovable"
 stack: "Lovable, Supabase (Postgres, Auth, Row Level Security)"
 demo: "https://tally-demo.lovable.app/"
 repo: ""
-hero_image: ""
+hero_image: "images/tally-hero.png"
 ---
 
 ## What it is

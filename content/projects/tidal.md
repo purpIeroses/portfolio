@@ -7,7 +7,7 @@ platform: "v0"
 stack: "v0, variable font, CSS variable-font axes"
 demo: "https://tidal-navy.vercel.app/"
 repo: ""
-hero_image: ""
+hero_image: "images/tidal-hero.png"
 ---
 
 ## What it is
