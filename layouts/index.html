@@ -20,13 +20,20 @@
 
   <div class="cards">
     {{ range (where .Site.RegularPages "Section" "projects").ByWeight }}
-    <a class="card" href="{{ .RelPermalink }}">
-      <div class="card-tag">{{ .Params.discipline }}</div>
-      <h3 class="card-title">{{ .Title }}</h3>
-      <p class="card-blurb">{{ .Params.summary }}</p>
-      <div class="card-meta">
-        <span>{{ .Params.platform }}</span>
-        <span class="card-arrow">→</span>
+    {{ $thumb := .Params.card_image | default .Params.hero_image }}
+    {{ $title := .Title }}
+    <a class="card{{ if not $thumb }} card-noimage{{ end }}" href="{{ .RelPermalink }}">
+      <div class="card-thumb">
+        {{ with $thumb }}<img src="{{ . | relURL }}" alt="{{ $title }} screenshot" loading="lazy">{{ else }}<span class="card-noimage-mark">{{ $title }}</span>{{ end }}
+      </div>
+      <div class="card-body">
+        <div class="card-tag">{{ .Params.discipline }}</div>
+        <h3 class="card-title">{{ .Title }}</h3>
+        <p class="card-blurb">{{ .Params.summary }}</p>
+        <div class="card-meta">
+          <span>{{ .Params.platform }}</span>
+          <span class="card-arrow">→</span>
+        </div>
       </div>
     </a>
     {{ end }}

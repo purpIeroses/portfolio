@@ -7,7 +7,8 @@ platform: "Vanilla JS + Canvas"
 stack: "HTML5 Canvas, ES modules, Supabase (Postgres + RLS)"
 demo: "/games/asteroids/"
 repo: ""   # paste your repo URL
-hero_image: ""  # e.g. images/asteroids-hero.png
+hero_image: ""
+card_image: "images/asteroids-hero.png"
 ---
 
 <div class="case-embed">
