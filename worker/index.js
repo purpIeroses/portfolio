@@ -55,6 +55,7 @@ async function handleContact(request, env) {
   });
 
   if (!res.ok) {
+    console.error("Resend error", res.status, await res.text());
     return json({ error: "Could not send right now — please email me directly." }, 502);
   }
 
