@@ -7,7 +7,6 @@ platform: "Hugo (static site generator)"
 stack: "Hugo + Go templates, Cloudflare Workers (static assets), GitHub, DigitalPlat free domain"
 demo: "https://sophianawasreh.dpdns.org/"
 repo: "https://github.com/purpIeroses/portfolio"
-hero_image: "images/this-site-hero.png"
 ---
 
 ## What it is

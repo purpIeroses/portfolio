@@ -17,40 +17,22 @@ hero_image: ""  # e.g. images/asteroids-hero.png
 
 ## What it is
 
-A from-scratch recreation of the 1979 arcade classic: vector-drawn ship and
-rocks, thrust with real inertia, screen wraparound, asteroids that split into
-three size tiers, hyperspace, and juice — screen shake, particle explosions, and
-synthesized sound with no audio files. Attached to it is a global high-score
-leaderboard backed by Postgres.
+A from-scratch rebuild of the 1979 arcade game—vector ship and rocks, thrust with real inertia, screen wraparound, asteroids that break into smaller pieces, hyperspace, and the little touches that make it feel alive: screen shake, particle bursts, and sound built in code rather than from audio files. There's a global high-score leaderboard sitting behind it, saving to a real database.
 
-## Why this one
+## Why I started here
 
-Most people building in AI-assisted tools can't build a game that *feels* right —
-the physics, the frame-rate independence, the collision timing. My background is
-game programming, so this is where I start: something interactive and tactile
-that also has a real backend to secure.
+Honestly, because it's the kind of thing I'm most comfortable with. A lot of people building with AI tools can't make a game that actually feels right—the physics, the timing, whether a collision lands when it should. That's the part I know well, so it felt like a natural place to begin, and it gave me a real backend to secure on top of the game itself.
 
-## The hard part
+## The part that took the actual thinking
 
-The leaderboard is where the engineering shows. The naive version — the one a
-fast build produces — lets the browser submit any score it wants. That's a
-leaderboard that's wrong within a day.
+The leaderboard is where the interesting problem lives. The quick way to build it lets the browser send whatever score it wants, which means someone could type a fake number straight into the high-score table within a day of it going up.
 
-I moved the trust boundary to the database. Scores are validated client-side
-first, but the real guarantee is at the table: **Row Level Security** plus
-`CHECK` constraints mean the database itself refuses malformed initials,
-negative scores, and implausible values, and forbids updates and deletes
-entirely. A tampered client still can't insert a bad row. The write path is
-insert-only by design.
+So I moved the trust out of the browser and into the database. The game checks scores first, but the real gatekeeping happens at the database level—it simply refuses anything malformed, negative, or impossibly high, and it won't let anyone edit or delete existing scores at all. Even if someone tampered with the page, they still couldn't get a bad score in. The only thing the table accepts is a legitimate new entry.
 
 ## What I'd add next
 
-Saucer enemies that shoot back, an attract-mode demo on the title screen, and an
-Edge Function gating submissions behind a signed run token — so a scripted POST
-can't flood the board with plausible-but-fake scores.
+Flying-saucer enemies that shoot back, a demo mode that plays itself on the title screen, and one more layer on the leaderboard so a script can't quietly flood it with believable-looking fake scores.
 
 ## The takeaway
 
-The game is the hook; the leaderboard is the point. It shows I don't just make
-things that run — I think about how they get abused, and I close the gap before
-it ships.
+The game is the fun part, but the leaderboard is the point. It's a small example of something I care about generally: not just making a thing run, but thinking about how people might break it, and closing that gap before it goes live.

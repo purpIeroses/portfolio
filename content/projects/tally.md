@@ -12,38 +12,22 @@ hero_image: "images/tally-hero.png"
 
 ## What it is
 
-Tally is a simple invoicing tool for solo freelancers — but the prototype is
-really about the full arc a client cares about: a marketing page that attracts,
-a CTA that captures leads into a database, auth that gates a real product, and a
-dashboard where each user manages only their own invoices.
+Tally is a simple invoicing tool for freelancers, but the prototype is really about everything that has to work underneath a product like that. There's a landing page to draw people in, a sign-up that captures them into a database, real accounts and logins, and a dashboard where each person only ever sees their own invoices—never anyone else's.
 
-## Why this one
+## Why I built it this way
 
-A landing page alone proves you can style a hero. This proves the thing
-underneath it works: accounts, sessions, ownership, roles. The public polish and
-the secured backend in one build.
+A landing page on its own just shows I can style a page. I wanted to show the harder half: accounts, logins, and the rules about who's allowed to see what. So it's the polished front and the working backend in one piece.
 
-## The hard part
+## The part that took the actual thinking
 
-The claim "auth done properly" lives or dies on one thing: **does a logged-in
-user actually get blocked from another user's data at the database, or is the UI
-just hiding it?** AI-assisted builders frequently generate a dashboard that
-*looks* gated while the underlying table is world-readable.
+The whole "handled the login properly" claim really comes down to one question: if you're logged in, are you genuinely blocked from seeing another user's data at the database, or is the app just hiding it from view? AI tools quite often build something that looks locked down while the underlying data is actually readable by anyone signed in.
 
-So I didn't trust the UI. I enforced ownership with Row Level Security:
-`auth.uid() = user_id` on every read and write, roles read from a server-side
-profile row rather than client state, and a waitlist table that's insert-only to
-the public and readable only by admins. Then I verified it the way an attacker
-would — two accounts, the network tab open, confirming the API itself returns
-zero of the other user's rows. Not the UI. The API.
+So I didn't take the interface at its word. I set the ownership rules at the database itself, so it enforces that you can only ever read or change your own records, and I put roles (like admin access) somewhere the user can't quietly edit. Then I tested it the way someone trying to break in would: two accounts open side by side, checking directly that one genuinely couldn't pull the other's data. Not just that it was hidden on screen—that the request itself came back empty.
 
 ## What I caught
 
-The first pass filtered invoices client-side while the table was readable by any
-authenticated user. I moved enforcement into RLS so the database refuses the
-request outright. That's the difference between a demo and a product.
+My first version filtered the invoices in the browser while the data underneath was readable by any logged-in user. I moved that enforcement down into the database so it refuses the request outright. That's really the line between a nice demo and something you could actually trust with real people's information.
 
 ## The takeaway
 
-Anyone can generate a login screen. The value is proving the boundary actually
-holds — and knowing how to test that it does.
+Anyone can put a login screen on a page. The value is in making sure the boundary actually holds—and knowing how to check that it does.

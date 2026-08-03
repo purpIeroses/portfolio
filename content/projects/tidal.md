@@ -12,42 +12,22 @@ hero_image: "images/tidal-hero.png"
 
 ## What it is
 
-Tidal is a showcase for a fictional variable typeface whose primary axis isn't
-weight — it's *depth*. Drag the slider from Surface to Abyss and the letterforms
-transform as if descending underwater: crisp and high-contrast at the top, thick
-and soft-contrast in the deep, the background darkening as you sink. Type your
-own words and watch them pressurize.
+Tidal is a showcase for a made-up typeface whose main control isn't boldness—it's depth. Drag the slider from "surface" to "abyss" and the letters change as if they're sinking underwater: sharp and high-contrast at the top, thick and soft the deeper they go, with the background darkening as you descend. You can type your own words and watch them sink.
 
-## Why this one
+## Why I made it
 
-Everything else in my portfolio leads with engineering. This leads with taste.
-It's here to prove I can make something that *looks* like a client would pay a
-premium for — deliberate typography, real restraint, and one interactive idea
-that people remember.
+Everything else in my portfolio leads with the engineering. This one leads with the look. I wanted something that shows I can make a page that feels considered and a bit special—careful typography, a lot of restraint, and one interactive idea that sticks with you.
 
 ## The idea
 
-Type-foundry sites are a genre with strong conventions: giant specimen, a "type
-your words" box, a weight slider, black on white. Doing those competently
-produces something that looks like every other foundry. Tidal's depth axis is
-the one thing that's mine — concept and signature fused into a single gesture, so
-the interaction *is* the idea rather than a demo bolted onto it.
+Type showcase sites tend to look the same: a huge specimen, a "type your own words" box, a boldness slider, black text on white. Doing that competently just gets you another site that looks like all the others. The depth axis is the one thing here that's mine—the idea and the interaction are the same gesture, so the thing you play with *is* the concept, rather than a gimmick bolted onto it.
 
 ## The craft
 
-The whole design spends its boldness in one place — the depth specimen — and
-keeps everything around it quiet so that moment is unmistakably the hero. The
-palette comes from descending water, not a default template. The display and
-body faces are a deliberate pairing on an intentional type scale. The axis drag
-is smooth and respects reduced motion. The copy is written with the typeface's
-personality, never placeholder text.
+The whole design spends its one big swing on the depth slider and keeps everything around it quiet, so that moment clearly stands out. The colours come from the idea of sinking through water rather than a default template. The fonts are a deliberate pairing, the sizing is intentional, the dragging is smooth, and it settles down gracefully for anyone who prefers less motion. The writing throughout is in the typeface's own voice instead of placeholder text.
 
-> Honest note: Tidal is fictional. A real free variable font backs the demo —
-> I'm showcasing design and front-end craft, not claiming to have drawn a
-> typeface.
+> One honest note: Tidal isn't a real typeface. I used Fraunces, an actual variable font, to stand in for it—this is a design and front-end piece, not a claim that I drew a typeface.
 
 ## The takeaway
 
-A design piece is judged on the details a fast build skips: the pairing, the
-scale, the restraint, the one memorable gesture. This is where I show I sweat
-those — and where my game background pays off in motion most people can't build.
+A design piece gets judged on the small things a rushed build skips—the font pairing, the spacing, the restraint, the one moment worth remembering. This is where I show I sweat those, and where my game background pays off in the kind of motion most people don't build.
