@@ -1,8 +1,19 @@
 <header class="nav">
-  <a class="nav-brand" href="{{ "/" | relURL }}">{{ .Site.Params.author | default .Site.Title }}</a>
-  <nav class="nav-links">
-    {{ range .Site.Menus.main }}
-      <a href="{{ .URL | relURL }}">{{ .Name }}</a>
-    {{ end }}
-  </nav>
+  <a class="nav-brand" href="{{ "/" | relLangURL }}">{{ .Site.Params.author | default .Site.Title }}</a>
+  <div class="nav-right">
+    <nav class="nav-links">
+      {{ range .Site.Menus.main }}
+        <a href="{{ .URL | relLangURL }}">{{ .Name }}</a>
+      {{ end }}
+    </nav>
+    <nav class="lang-switch" aria-label="{{ i18n "lang_switch_label" }}">
+      {{ range .AllTranslations }}
+        {{ if eq .Lang $.Lang }}
+          <span class="lang-current">{{ .Lang | upper }}</span>
+        {{ else }}
+          <a href="{{ .Permalink }}">{{ .Lang | upper }}</a>
+        {{ end }}
+      {{ end }}
+    </nav>
+  </div>
 </header>

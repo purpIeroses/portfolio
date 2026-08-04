@@ -1,0 +1,74 @@
+[hero_cta_work]
+other = "See the work"
+
+[hero_cta_contact]
+other = "Get in touch"
+
+[case_back_all_work]
+other = "← All work"
+
+[case_back_home]
+other = "← Back home"
+
+[case_nav_back]
+other = "← Back to all work"
+
+[case_nav_next]
+other = "Start a project →"
+
+[case_demo_default]
+other = "View live demo →"
+
+[case_repo_link]
+other = "Repository →"
+
+[case_platform]
+other = "Platform"
+
+[case_stack]
+other = "Stack"
+
+[case_code]
+other = "Code"
+
+[contact_title]
+other = "Let's build something."
+
+[contact_intro_before]
+other = "Tell me what you need and I'll get back to you within a day or two — or email "
+
+[contact_intro_after]
+other = " directly if you'd rather skip the form."
+
+[form_name]
+other = "Name"
+
+[form_email]
+other = "Email"
+
+[form_message]
+other = "What do you need built?"
+
+[form_company]
+other = "Company"
+
+[form_submit]
+other = "Send message →"
+
+[js_sending]
+other = "Sending…"
+
+[js_sent]
+other = "Sent — I'll be in touch soon."
+
+[js_error]
+other = "Something went wrong. Try emailing me directly instead."
+
+[footer_cta]
+other = "Have something that needs building?"
+
+[footer_built]
+other = "Built with Hugo."
+
+[lang_switch_label]
+other = "Language"

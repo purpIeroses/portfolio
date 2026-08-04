@@ -1,0 +1,74 @@
+[hero_cta_work]
+other = "استعرض الأعمال"
+
+[hero_cta_contact]
+other = "تواصل معي"
+
+[case_back_all_work]
+other = "→ كل الأعمال"
+
+[case_back_home]
+other = "→ العودة للرئيسية"
+
+[case_nav_back]
+other = "→ العودة إلى كل الأعمال"
+
+[case_nav_next]
+other = "ابدأ مشروعًا ←"
+
+[case_demo_default]
+other = "شاهد العرض المباشر ←"
+
+[case_repo_link]
+other = "المستودع ←"
+
+[case_platform]
+other = "المنصة"
+
+[case_stack]
+other = "التقنيات"
+
+[case_code]
+other = "الكود"
+
+[contact_title]
+other = "لنبنِ شيئًا معًا."
+
+[contact_intro_before]
+other = "أخبرني بما تحتاج بناءه وسأعاود التواصل خلال يوم أو يومين — أو راسلني مباشرة على "
+
+[contact_intro_after]
+other = " إذا كنت تفضّل تخطي النموذج."
+
+[form_name]
+other = "الاسم"
+
+[form_email]
+other = "البريد الإلكتروني"
+
+[form_message]
+other = "ما الذي تحتاج بناءه؟"
+
+[form_company]
+other = "الشركة"
+
+[form_submit]
+other = "أرسل الرسالة ←"
+
+[js_sending]
+other = "جارٍ الإرسال…"
+
+[js_sent]
+other = "تم الإرسال — سأتواصل معك قريبًا."
+
+[js_error]
+other = "حدث خطأ ما. جرّب مراسلتي مباشرة بدلاً من ذلك."
+
+[footer_cta]
+other = "لديك شيء يحتاج إلى بناء؟"
+
+[footer_built]
+other = "بُني باستخدام Hugo."
+
+[lang_switch_label]
+other = "اللغة"

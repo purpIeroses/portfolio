@@ -1,5 +1,5 @@
 baseURL = "https://sophianawasreh.dpdns.org/"
-languageCode = "en-us"
+locale = "en-us"
 title = "Sophia Al-Nawasreh — Builder"
 enableRobotsTXT = true
 
@@ -8,28 +8,56 @@ enableRobotsTXT = true
 # just a reminder of the version you developed against.
 # Developed against: Hugo extended 0.164.x
 
+defaultContentLanguage = "en"
+defaultContentLanguageInSubdir = false
+
 [params]
-  description = "I ship working products fast — then harden them. Freelance builder working across game dev, full-stack, AI integration, and design."
   author = "Sophia Al-Nawasreh"
   email = "sophiaalnawasreh@gmail.com"
-  # social — fill or delete
-  github = "https://github.com/purpIeroses"
-  # tagline shown in the hero
-  tagline = "I ship working products fast — then make them hold up."
 
-[menu]
-  [[menu.main]]
-    name = "Work"
-    url = "/#work"
+[languages]
+  [languages.en]
+    label = "English"
+    locale = "en-us"
     weight = 1
-  [[menu.main]]
-    name = "About"
-    url = "/#about"
+    title = "Sophia Al-Nawasreh — Builder"
+    [languages.en.params]
+      description = "I ship working products fast — then harden them. Freelance builder working across game dev, full-stack, AI integration, and design."
+      tagline = "I ship working products fast — then make them hold up."
+    [[languages.en.menu.main]]
+      name = "Work"
+      url = "/#work"
+      weight = 1
+    [[languages.en.menu.main]]
+      name = "About"
+      url = "/#about"
+      weight = 2
+    [[languages.en.menu.main]]
+      name = "Contact"
+      url = "/contact/"
+      weight = 3
+
+  [languages.ar]
+    label = "العربية"
+    locale = "ar"
     weight = 2
-  [[menu.main]]
-    name = "Contact"
-    url = "/contact/"
-    weight = 3
+    title = "صوفيا النواصره — مطوّرة"
+    [languages.ar.params]
+      author = "صوفيا النواصره"
+      description = "أُطلق منتجات فعّالة بسرعة — ثم أعمل على تحصينها. مطوّرة مستقلة أعمل في تطوير الألعاب، والتطوير الشامل، ودمج الذكاء الاصطناعي، والتصميم."
+      tagline = "أُطلق منتجات فعّالة بسرعة — ثم أجعلها تصمد."
+    [[languages.ar.menu.main]]
+      name = "الأعمال"
+      url = "/#work"
+      weight = 1
+    [[languages.ar.menu.main]]
+      name = "نبذة"
+      url = "/#about"
+      weight = 2
+    [[languages.ar.menu.main]]
+      name = "تواصل"
+      url = "/contact/"
+      weight = 3
 
 [markup.goldmark.renderer]
   unsafe = true  # allow raw HTML in markdown (for embeds/screenshots)

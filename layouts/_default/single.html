@@ -1,6 +1,6 @@
 {{ define "main" }}
 <article class="case">
-  <a class="case-back" href="{{ "/#work" | relURL }}">← All work</a>
+  <a class="case-back" href="{{ "/#work" | relLangURL }}">{{ i18n "case_back_all_work" }}</a>
 
   <header class="case-head">
     <div class="case-tag">{{ .Params.discipline }}</div>
@@ -8,13 +8,13 @@
     <p class="case-summary">{{ .Params.summary }}</p>
 
     {{ with .Params.demo }}
-    <a class="btn case-demo-btn" href="{{ . }}" target="_blank" rel="noopener">{{ $.Params.demo_label | default "View live demo →" }}</a>
+    <a class="btn case-demo-btn" href="{{ . }}" target="_blank" rel="noopener">{{ $.Params.demo_label | default (i18n "case_demo_default") }}</a>
     {{ end }}
 
     <dl class="case-facts">
-      <div><dt>Platform</dt><dd>{{ .Params.platform }}</dd></div>
-      <div><dt>Stack</dt><dd>{{ .Params.stack }}</dd></div>
-      {{ with .Params.repo }}<div><dt>Code</dt><dd><a href="{{ . }}" target="_blank" rel="noopener">Repository →</a></dd></div>{{ end }}
+      <div><dt>{{ i18n "case_platform" }}</dt><dd>{{ .Params.platform }}</dd></div>
+      <div><dt>{{ i18n "case_stack" }}</dt><dd>{{ .Params.stack }}</dd></div>
+      {{ with .Params.repo }}<div><dt>{{ i18n "case_code" }}</dt><dd><a href="{{ . }}" target="_blank" rel="noopener">{{ i18n "case_repo_link" }}</a></dd></div>{{ end }}
     </dl>
   </header>
 
@@ -29,8 +29,8 @@
   </div>
 
   <nav class="case-nav">
-    <a href="{{ "/#work" | relURL }}">← Back to all work</a>
-    <a href="{{ "/contact/" | relURL }}">Start a project →</a>
+    <a href="{{ "/#work" | relLangURL }}">{{ i18n "case_nav_back" }}</a>
+    <a href="{{ "/contact/" | relLangURL }}">{{ i18n "case_nav_next" }}</a>
   </nav>
 </article>
 {{ end }}
