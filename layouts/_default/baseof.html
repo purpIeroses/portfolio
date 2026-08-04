@@ -14,10 +14,12 @@
   <link rel="stylesheet" href="{{ "css/main.css" | relURL }}">
 </head>
 <body>
+  {{ partial "floaties.html" . }}
   {{ partial "nav.html" . }}
   <main>
     {{ block "main" . }}{{ end }}
   </main>
   {{ partial "footer.html" . }}
+  <script src="{{ "js/floaties.js" | relURL }}" defer></script>
 </body>
 </html>
