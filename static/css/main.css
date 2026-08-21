@@ -57,7 +57,13 @@ a { color: inherit; text-decoration: none; }
   max-width: var(--wrap); margin: 0 auto;
   padding: 28px 24px;
 }
-.nav-brand { font-family: var(--display); font-weight: 900; font-size: 20px; letter-spacing: -0.01em; }
+.nav-brand {
+  display: inline-flex; align-items: center; gap: 10px;
+  font-family: var(--display); font-weight: 900; font-size: 20px; letter-spacing: -0.01em;
+}
+/* The mark ships with its own paper-coloured margin baked in, so the gap above
+   is tighter than it looks. Sized a touch above the name's cap height. */
+.nav-mark { display: block; height: 28px; width: auto; }
 .nav-right { display: flex; align-items: center; gap: 26px; }
 .nav-links { display: flex; gap: 26px; font-size: 14px; font-weight: 500; }
 .nav-links a { color: var(--ink-soft); transition: color 0.15s; }
@@ -244,6 +250,7 @@ a { color: inherit; text-decoration: none; }
   .nav { padding: 20px 24px; flex-wrap: wrap; gap: 12px; }
   .nav-links { gap: 18px; }
   .nav-right { gap: 18px; }
+  .nav-mark { height: 24px; }
 }
 
 :focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }

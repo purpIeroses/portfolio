@@ -1,5 +1,16 @@
 <header class="nav">
-  <a class="nav-brand" href="{{ "/" | relLangURL }}">{{ .Site.Params.author | default .Site.Title }}</a>
+  <a class="nav-brand" href="{{ "/" | relLangURL }}">
+    {{/* The mark is decorative: the name sits right beside it inside the same
+         link, so alt text would only repeat what is already read out. Served
+         at 2x and scaled down in CSS. The brand is a flex row, so it mirrors
+         off the `dir` attribute on its own — mark left of the name in English,
+         right of it in Arabic — with no per-language markup. */}}
+    {{ with resources.Get "images/logo.png" }}
+    {{ $mark := .Resize "56x png" }}
+    <img class="nav-mark" src="{{ $mark.RelPermalink }}" width="{{ $mark.Width }}" height="{{ $mark.Height }}" alt="" aria-hidden="true">
+    {{ end }}
+    <span>{{ .Site.Params.author | default .Site.Title }}</span>
+  </a>
   <div class="nav-right">
     <nav class="nav-links">
       {{ range .Site.Menus.main }}
