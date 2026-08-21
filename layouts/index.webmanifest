@@ -1,0 +1,29 @@
+{{- /* Web app manifest for the "add to home screen" install. One template, one
+       file per language (see [outputs] in hugo.toml); jsonify quotes and escapes
+       every string so titles with punctuation can't produce invalid JSON. */ -}}
+{
+  "name": {{ .Site.Title | jsonify }},
+  "short_name": {{ .Site.Params.manifest_short_name | default .Site.Title | jsonify }},
+  "description": {{ .Site.Params.description | jsonify }},
+  "lang": {{ .Site.Language.Lang | jsonify }},
+  "dir": {{ (cond (eq .Site.Language.Lang "ar") "rtl" "ltr") | jsonify }},
+  {{/* start_url opens the language you installed from; scope stays at the root
+       so the language switcher doesn't kick you out of the installed app. */}}
+  "start_url": {{ .RelPermalink | jsonify }},
+  "scope": {{ "/" | relURL | jsonify }},
+  "display": "standalone",
+  "background_color": "#faf8f4",
+  "theme_color": "#faf8f4",
+  "icons": [
+    {
+      "src": {{ "android-chrome-192x192.png" | relURL | jsonify }},
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": {{ "android-chrome-512x512.png" | relURL | jsonify }},
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

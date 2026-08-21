@@ -61,6 +61,18 @@
   {{ range .AllTranslations }}
   <link rel="alternate" hreflang="{{ .Language.Locale }}" href="{{ .Permalink }}">
   {{ end }}
+  {{/* Icons live at the site root (static/), so both languages and every host
+       resolve the same files; the manifest is per-language, so ask the current
+       language's home page for its own URL. */}}
+  <link rel="icon" href="{{ "favicon.ico" | relURL }}" sizes="32x32">
+  <link rel="icon" type="image/png" sizes="32x32" href="{{ "favicon-32x32.png" | relURL }}">
+  <link rel="icon" type="image/png" sizes="16x16" href="{{ "favicon-16x16.png" | relURL }}">
+  <link rel="apple-touch-icon" sizes="180x180" href="{{ "apple-touch-icon.png" | relURL }}">
+  {{ with .Site.Home.OutputFormats.Get "webappmanifest" }}
+  <link rel="manifest" href="{{ .RelPermalink }}">
+  {{ end }}
+  <meta name="theme-color" content="#faf8f4">
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   {{ if eq .Site.Language.Lang "ar" }}

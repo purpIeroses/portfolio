@@ -27,6 +27,7 @@ defaultContentLanguageInSubdir = false
       og_locale = "en_US"
       description = "I ship working products fast — then harden them. Freelance builder working across game dev, full-stack, AI integration, and design."
       tagline = "I ship working products fast — then make them hold up."
+      manifest_short_name = "Sophia"
     [[languages.en.menu.main]]
       name = "Work"
       url = "/#work"
@@ -52,6 +53,7 @@ defaultContentLanguageInSubdir = false
       author = "صوفيا النواصره"
       description = "أُطلق منتجات فعّالة بسرعة — ثم أعمل على تحصينها. مطوّرة مستقلة أعمل في تطوير الألعاب، والتطوير الشامل، ودمج الذكاء الاصطناعي، والتصميم."
       tagline = "أُطلق منتجات فعّالة بسرعة — ثم أجعلها تصمد."
+      manifest_short_name = "صوفيا"
     [[languages.ar.menu.main]]
       name = "الأعمال"
       url = "/#work"
@@ -64,6 +66,25 @@ defaultContentLanguageInSubdir = false
       name = "تواصل"
       url = "/contact/"
       weight = 3
+
+# Web app manifest, generated per language from layouts/index.webmanifest so the
+# installed-app name matches the page it was installed from (Hugo writes
+# /site.webmanifest and /ar/site.webmanifest). isPlainText keeps the em dash and
+# the Arabic title from being escaped into HTML entities, which would be invalid
+# JSON; notAlternative keeps the format out of rel="alternate" listings.
+[mediaTypes]
+  [mediaTypes."application/manifest+json"]
+    suffixes = ["webmanifest"]
+
+[outputFormats]
+  [outputFormats.WebAppManifest]
+    mediaType = "application/manifest+json"
+    baseName = "site"
+    isPlainText = true
+    notAlternative = true
+
+[outputs]
+  home = ["HTML", "RSS", "WebAppManifest"]
 
 [markup.goldmark.renderer]
   unsafe = true  # allow raw HTML in markdown (for embeds/screenshots)
