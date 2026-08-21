@@ -1,0 +1,3 @@
+# Cloudflare parses static/_headers line by line. Pin it to LF so a Windows
+# checkout (core.autocrlf) cannot leave stray carriage returns in the values.
+static/_headers text eol=lf
