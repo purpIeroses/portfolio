@@ -2,7 +2,7 @@
 title: "Tally"
 weight: 2
 discipline: "Full-stack / Auth"
-summary: "A polished landing page with a real, secured product behind it — signups, auth, and a gated dashboard where users only ever see their own data."
+summary: "A polished landing page with a real, secured product behind it — clients, invoices, PDFs and email, on a gated dashboard where users only ever see their own data."
 platform: "Lovable"
 stack: "Lovable, Supabase (Postgres, Auth, Row Level Security)"
 demo: "https://tally-demo.lovable.app/"
@@ -13,6 +13,10 @@ hero_image: "images/tally-hero.png"
 ## What it is
 
 Tally is a simple invoicing tool for freelancers, but the prototype is really about everything that has to work underneath a product like that. There's a landing page to draw people in, a sign-up that captures them into a database, real accounts and logins, and a dashboard where each person only ever sees their own invoices—never anyone else's.
+
+The invoicing goes the whole way through. You keep a list of clients and bill them without retyping their details each time; invoices number themselves in sequence; each one takes as many line items as the job needs, with tax and discounts applied on top. A finished invoice downloads as a PDF straight from the browser, or goes to the client as a branded email.
+
+> One honest note: the money side isn't live. Getting paid is built as a Stripe layer that's deliberately stubbed—the flow is there, but it isn't wired to real payments.
 
 ## Why I built it this way
 

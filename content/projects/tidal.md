@@ -2,7 +2,7 @@
 title: "Tidal"
 weight: 4
 discipline: "Design / Front-end"
-summary: "A type specimen where the concept and the interaction are the same thing: drag a 'depth' axis and the letterforms sink underwater."
+summary: "A type specimen where the concept and the interaction are the same thing: drag a 'depth' axis — or just scroll — and the letterforms sink underwater."
 platform: "v0"
 stack: "v0, variable font, CSS variable-font axes"
 demo: "https://tidal-navy.vercel.app/"
@@ -12,7 +12,11 @@ hero_image: "images/tidal-hero.png"
 
 ## What it is
 
-Tidal is a showcase for a made-up typeface whose main control isn't boldness—it's depth. Drag the slider from "surface" to "abyss" and the letters change as if they're sinking underwater: sharp and high-contrast at the top, thick and soft the deeper they go, with the background darkening as you descend. You can type your own words and watch them sink.
+Tidal is a showcase for a made-up typeface whose main control isn't boldness—it's depth. Drag the slider from "surface" to "abyss" and the letters change as if they're sinking underwater: sharp and high-contrast at the top, thick and soft the deeper they go, with the background darkening as you descend and caustics drifting across it like light bending through the surface.
+
+The slider has weight to it. Let go mid-drag and it carries on and settles rather than stopping dead, so moving through the range feels like moving something through water. If you'd rather not drag at all, scrolling the page takes you down instead.
+
+You can type your own words and watch them sink. Below that, a waterfall runs the specimen down through every size in a single column, and any glyph can be opened on its own to see how it's drawn and what depth does to it. Wherever you end up has its own address, so one word at one depth is something you can send to someone.
 
 ## Why I made it
 

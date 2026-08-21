@@ -2,7 +2,7 @@
 title: "Parsel"
 weight: 3
 discipline: "AI Integration"
-summary: "Paste a messy job posting, get clean structured data — every time. An AI feature built around the hard part: making model output trustworthy."
+summary: "Paste messy text, get clean structured data — every time. Custom schemas, per-field confidence and exports, built around the hard part: making model output trustworthy."
 platform: "Bolt.new"
 stack: "Bolt.new, LLM API, Zod validation, serverless route"
 demo: "https://parsel-demo.bolt.host/"
@@ -12,7 +12,11 @@ hero_image: "images/parsel-hero.png"
 
 ## What it is
 
-Parsel takes a messy job posting—pasted in however it happens to be formatted—and pulls out the useful bits as clean, structured data: title, company, location, salary range, employment type, skills, responsibilities, contact details, and so on. You paste into one side, and the organised version appears on the other, ready to copy or download as JSON. The same engine would work just as well on invoices or listings; you'd only swap out what it's looking for.
+Parsel takes a messy job posting—pasted in however it happens to be formatted—and pulls out the useful bits as clean, structured data: title, company, location, salary range, employment type, skills, responsibilities, contact details, and so on. You paste into one side, and the organised version appears on the other.
+
+Job postings are only the default. Pick a different schema or write your own, and the same engine reads invoices or listings instead—you're changing what it looks for, not how it works.
+
+Nothing it hands back is locked. Every field can be edited, and each one carries its own confidence reading, so you can see where the model was certain and where it was reaching; the low ones are where to look first. Once it's right, it leaves as CSV, JSON or plain text. And when you have a stack of postings rather than one, batch mode takes the lot and hands back the whole set together.
 
 ## Why I built it
 
