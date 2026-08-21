@@ -72,3 +72,6 @@ other = "Built with Hugo."
 
 [lang_switch_label]
 other = "Language"
+
+[og_screenshot_alt]
+other = "{{ .Title }} — project screenshot"

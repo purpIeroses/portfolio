@@ -22,6 +22,9 @@ defaultContentLanguageInSubdir = false
     weight = 1
     title = "Sophia Al-Nawasreh — Builder"
     [languages.en.params]
+      og_image = "images/linkpreviewENG.png"
+      og_image_alt = "Sophia Al-Nawasreh — freelance builder portfolio"
+      og_locale = "en_US"
       description = "I ship working products fast — then harden them. Freelance builder working across game dev, full-stack, AI integration, and design."
       tagline = "I ship working products fast — then make them hold up."
     [[languages.en.menu.main]]
@@ -43,6 +46,9 @@ defaultContentLanguageInSubdir = false
     weight = 2
     title = "صوفيا النواصره — مطوّرة"
     [languages.ar.params]
+      og_image = "images/linkpreviewAR.png"
+      og_image_alt = "صوفيا النواصره — موقع أعمال مطوّرة مستقلة"
+      og_locale = "ar_AR"
       author = "صوفيا النواصره"
       description = "أُطلق منتجات فعّالة بسرعة — ثم أعمل على تحصينها. مطوّرة مستقلة أعمل في تطوير الألعاب، والتطوير الشامل، ودمج الذكاء الاصطناعي، والتصميم."
       tagline = "أُطلق منتجات فعّالة بسرعة — ثم أجعلها تصمد."
