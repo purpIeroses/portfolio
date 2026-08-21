@@ -1,5 +1,8 @@
-# Netlify deploy config. If you use Netlify instead of Cloudflare, this is all
-# you need — connect the repo and Netlify reads this.
+# Netlify deploy config. Not used by the live site — that deploys to
+# Cloudflare Workers, which reads static/_headers (copied to public/) and
+# wrangler.jsonc instead. Keep the headers below in sync with static/_headers.
+# If you use Netlify instead of Cloudflare, this is all you need — connect the
+# repo and Netlify reads this.
 [build]
   publish = "public"
   command = "hugo --gc --minify"

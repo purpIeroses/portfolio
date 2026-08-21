@@ -1,0 +1,20 @@
+# Security headers for Cloudflare Workers static assets. Hugo copies this file
+# verbatim from static/ to public/, which is the assets directory wrangler
+# uploads (see wrangler.jsonc). Keep in sync with netlify.toml, which declares
+# the same headers for the alternative host.
+#
+# Cloudflare applies every matching rule in file order. Repeating a header name
+# across two matching rules joins the values with a comma, so the /games/*
+# override below first detaches X-Frame-Options ("! " prefix) and then re-sets
+# it — otherwise it would come out as "DENY, SAMEORIGIN".
+
+/*
+  X-Frame-Options: DENY
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+
+# Asteroids is embedded same-origin in the project case study
+# (content/projects/asteroids.md), so framing must be allowed here.
+/games/*
+  ! X-Frame-Options
+  X-Frame-Options: SAMEORIGIN
