@@ -2,7 +2,7 @@
 title: "Tally"
 weight: 3
 discipline: "Full-stack / Auth"
-summary: "A polished landing page with a real, secured product behind it — clients, invoices, PDFs and email, on a gated dashboard where users only ever see their own data."
+summary: "An invoicing tool with clients, PDFs and email behind a real login — where the rule that you only see your own invoices lives in the database, not in the interface."
 platform: "Lovable"
 stack: "Lovable, Supabase (Postgres, Auth, Row Level Security)"
 demo: "https://tally-demo.lovable.app/"
@@ -12,26 +12,20 @@ hero_image: "images/tally-hero.png"
 
 ## What it is
 
-Tally is a simple invoicing tool for freelancers, but the prototype is really about everything that has to work underneath a product like that. There's a landing page to draw people in, a sign-up that captures them into a database, real accounts and logins, and a dashboard where each person only ever sees their own invoices—never anyone else's.
+Tally is a simple invoicing tool for freelancers, though the prototype is really about everything that has to work underneath a product like that. There is a landing page, a sign-up that writes people into a database, real accounts and logins, and a dashboard where each person only ever sees their own invoices.
 
-The invoicing goes the whole way through. You keep a list of clients and bill them without retyping their details each time; invoices number themselves in sequence; each one takes as many line items as the job needs, with tax and discounts applied on top. A finished invoice downloads as a PDF straight from the browser, or goes to the client as a branded email.
+The invoicing goes the whole way through. You keep a list of clients so you are not retyping details for every job, invoice numbers run in sequence, and each invoice takes as many line items as the work needs, with tax and discounts applied on top. A finished invoice downloads as a PDF straight from the browser, or goes to the client as a branded email.
 
-> One honest note: the money side isn't live. Getting paid is built as a Stripe layer that's deliberately stubbed—the flow is there, but it isn't wired to real payments.
+> One honest note: the money side is not live. Getting paid is built as a Stripe layer that is deliberately stubbed, so the flow exists but nothing is wired to real payments.
 
 ## Why I built it this way
 
-A landing page on its own just shows I can style a page. I wanted to show the harder half: accounts, logins, and the rules about who's allowed to see what. So it's the polished front and the working backend in one piece.
+A landing page on its own only shows that I can style a page. I wanted the harder half in the same project: accounts, logins, and the rules about who is allowed to see what.
 
 ## The part that took the actual thinking
 
-The whole "handled the login properly" claim really comes down to one question: if you're logged in, are you genuinely blocked from seeing another user's data at the database, or is the app just hiding it from view? AI tools quite often build something that looks locked down while the underlying data is actually readable by anyone signed in.
+Everything in the claim "the login is handled properly" comes down to one question. When you are logged in, are you genuinely prevented from reading another user's data by the database, or is the application simply not showing it to you?
 
-So I didn't take the interface at its word. I set the ownership rules at the database itself, so it enforces that you can only ever read or change your own records, and I put roles (like admin access) somewhere the user can't quietly edit. Then I tested it the way someone trying to break in would: two accounts open side by side, checking directly that one genuinely couldn't pull the other's data. Not just that it was hidden on screen—that the request itself came back empty.
+My first version was the second thing. It filtered invoices in the browser, while the underlying table would still return every row to any signed-in user. Nothing looked wrong. Every account saw only its own invoices on screen, and the data was there for the asking to anyone who knew how to ask.
 
-## What I caught
-
-My first version filtered the invoices in the browser while the data underneath was readable by any logged-in user. I moved that enforcement down into the database so it refuses the request outright. That's really the line between a nice demo and something you could actually trust with real people's information.
-
-## The takeaway
-
-Anyone can put a login screen on a page. The value is in making sure the boundary actually holds—and knowing how to check that it does.
+So I moved the enforcement down into the database, as row-level security policies that tie every row to its owner and refuse the request outright rather than returning rows the interface then hides. Roles like admin access went into a place the user cannot edit, rather than being a field on their own profile. Then I checked it the way someone trying to get in would: two accounts open side by side, querying directly for the other account's records, and confirming that what came back was empty rather than hidden.

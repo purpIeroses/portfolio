@@ -2,7 +2,7 @@
 title: "Asteroids"
 weight: 2
 discipline: "Interactive / Game"
-summary: "A faithful vector arcade clone with a real global leaderboard — built to prove I can ship interactive work and secure the backend behind it."
+summary: "A from-scratch rebuild of the 1979 arcade game, with a global high-score table that the database itself won't let anyone fake."
 platform: "Vanilla JS + Canvas"
 stack: "HTML5 Canvas, ES modules, Supabase (Postgres + RLS)"
 demo: "/games/asteroids/"
@@ -18,22 +18,20 @@ card_image: "images/asteroids-hero.png"
 
 ## What it is
 
-A from-scratch rebuild of the 1979 arcade game—vector ship and rocks, thrust with real inertia, screen wraparound, asteroids that break into smaller pieces, hyperspace, and the little touches that make it feel alive: screen shake, particle bursts, and sound built in code rather than from audio files. There's a global high-score leaderboard sitting behind it, saving to a real database.
+A rebuild of the 1979 arcade game, written from scratch in plain JavaScript against an HTML5 canvas. The ship is drawn as vectors and thrusts with real inertia, so it keeps drifting after you stop pushing. Everything wraps around the edges of the screen, asteroids break into smaller asteroids when you shoot them, and hyperspace drops you somewhere random. The screen shakes when something explodes, the debris is a particle burst, and there are no audio files anywhere in the project — every sound is generated in code by the browser as it plays. Behind the game there is a global high-score table saving to a real Postgres database.
 
 ## Why I started here
 
-Honestly, because it's the kind of thing I'm most comfortable with. A lot of people building with AI tools can't make a game that actually feels right—the physics, the timing, whether a collision lands when it should. That's the part I know well, so it felt like a natural place to begin, and it gave me a real backend to secure on top of the game itself.
+Game programming is what I learned first and it is still what I am most comfortable with, so it was the easiest place to start and the fastest way to have something you could actually play in a browser. It also gave me a real backend to secure, which was the part I wanted to spend time on.
 
 ## The part that took the actual thinking
 
-The leaderboard is where the interesting problem lives. The quick way to build it lets the browser send whatever score it wants, which means someone could type a fake number straight into the high-score table within a day of it going up.
+A leaderboard is one of those features that is easy to build in a way that falls over immediately. The straightforward version has the browser send a score to the database and the database write it down, which means anybody who opens the developer console can type whatever number they like into the high-score table.
 
-So I moved the trust out of the browser and into the database. The game checks scores first, but the real gatekeeping happens at the database level—it simply refuses anything malformed, negative, or impossibly high, and it won't let anyone edit or delete existing scores at all. Even if someone tampered with the page, they still couldn't get a bad score in. The only thing the table accepts is a legitimate new entry.
+So I moved the decision out of the browser. The game still checks the score, but that check is only there to catch honest mistakes; the enforcement is written as row-level security policies on the table itself. The database will only accept an insert, never an update or a delete, so existing scores cannot be edited or removed by anyone using the site. It rejects anything malformed, anything negative, and anything above a ceiling that is higher than a real session can reach. Someone who tampers with the page is still talking to those same policies, and gets the same refusal.
 
-## What I'd add next
+## What I would add next
 
-Flying-saucer enemies that shoot back, a demo mode that plays itself on the title screen, and one more layer on the leaderboard so a script can't quietly flood it with believable-looking fake scores.
+Flying-saucer enemies that shoot back, and a demo mode that plays itself on the title screen the way the original cabinet did.
 
-## The takeaway
-
-The game is the fun part, but the leaderboard is the point. It's a small example of something I care about generally: not just making a thing run, but thinking about how people might break it, and closing that gap before it goes live.
+The leaderboard also has a gap I have not closed. Nothing currently stops a script from submitting a long series of plausible scores — each one individually legitimate, arriving faster than a person could play. Rate limiting per address, or signing the submission from the game itself, would fix it, and it is the next thing I would do to this project.

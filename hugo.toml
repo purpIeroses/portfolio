@@ -25,8 +25,8 @@ defaultContentLanguageInSubdir = false
       og_image = "images/linkpreviewENG.png"
       og_image_alt = "Sophia Al-Nawasreh — freelance builder portfolio"
       og_locale = "en_US"
-      description = "I ship working products fast — then harden them. Freelance builder working across game dev, full-stack, AI integration, and design."
-      tagline = "I ship working products fast — then make them hold up."
+      description = "Freelance builder — games, full-stack web, AI features and design. I get to a working version quickly, then go back for the parts that version skipped."
+      tagline = "I build things, and I care whether they actually work."
       manifest_short_name = "Sophia"
     [[languages.en.menu.main]]
       name = "Work"
@@ -51,8 +51,8 @@ defaultContentLanguageInSubdir = false
       og_image_alt = "صوفيا النواصره — موقع أعمال مطوّرة مستقلة"
       og_locale = "ar_AR"
       author = "صوفيا النواصره"
-      description = "أُطلق منتجات فعّالة بسرعة — ثم أعمل على تحصينها. مطوّرة مستقلة أعمل في تطوير الألعاب، والتطوير الشامل، ودمج الذكاء الاصطناعي، والتصميم."
-      tagline = "أُطلق منتجات فعّالة بسرعة — ثم أجعلها تصمد."
+      description = "مطوّرة مستقلة: ألعاب، وتطوير ويب شامل، وميزات ذكاء اصطناعي، وتصميم. أصل إلى نسخة تعمل بسرعة، ثم أعود إلى الأجزاء التي تخطّتها تلك النسخة."
+      tagline = "أبني أشياء، ويهمّني أن تعمل فعلاً."
       manifest_short_name = "صوفيا"
     [[languages.ar.menu.main]]
       name = "الأعمال"

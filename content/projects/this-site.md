@@ -2,7 +2,7 @@
 title: "This Site"
 weight: 6
 discipline: "Full-stack / Infra"
-summary: "The portfolio you're looking at right now — built in Hugo, not assembled in a drag-and-drop builder, and deployed through a live platform migration."
+summary: "The portfolio you are reading — a Hugo project with hand-written templates and CSS, bilingual in Arabic and English, deployed through a platform migration that happened underneath me."
 platform: "Hugo (static site generator)"
 stack: "Hugo + Go templates, Cloudflare Workers (static assets), GitHub, DigitalPlat free domain"
 demo: "https://sophianawasreh.dpdns.org/"
@@ -12,48 +12,24 @@ repo: "https://github.com/purpIeroses/portfolio"
 
 ## What it is
 
-This case study is the site itself. No Squarespace, no Webflow, no template
-marketplace — a Hugo project with custom layouts, a Go-template homepage and
-case-study page, and CSS written from scratch. The other four projects show
-what I can build; this one shows how I actually ship and host something, end
-to end.
+This case study is the site itself. There is no Squarespace, no Webflow and no theme from a marketplace: it is a Hugo project with layouts I wrote, a homepage and case-study template built on Hugo's Go templating, and CSS written from scratch. The other projects show what I can build. This one is the part that usually stays hidden, which is how I get something built onto a domain and keep it there.
+
+It is also bilingual. Every page exists in English and Arabic, the Arabic version runs right-to-left, and each language has its own metadata and link preview image rather than sharing the English one.
 
 ## Why this one
 
-It's easy to claim "I can deploy things." It's more convincing to point at the
-exact repo, the exact DNS setup, and the exact page you're reading, and say
-"this is that." A portfolio built in a no-code tool is a demonstration of
-someone else's engineering. This one is mine.
+Saying "I can deploy things" is easy and does not tell you much. Pointing at the repository, the DNS records and the page you are currently reading is a more useful thing to offer, because you can go and check all three.
 
 ## The build
 
-Hugo over a JS framework because a portfolio is content, not an app — static
-generation means no client-side routing bugs, no hydration cost, and a build
-that's fast enough to iterate on instantly. The homepage and case-study
-templates are custom `baseof`/`single`/`index` layouts using Hugo's Go
-templating rather than a downloaded theme, so every section — hero, work grid,
-about — is exactly as opinionated as I want it.
+I chose Hugo over a JavaScript framework because a portfolio is content rather than an application. Static generation means there is no client-side routing to go wrong, nothing to hydrate, and a build fast enough that I can change a line and see it immediately. The homepage and case-study templates are my own `baseof`, `single` and `index` layouts rather than a downloaded theme, so the hero, the work grid and the about section are laid out exactly the way I wanted them.
 
 ## The deploy
 
-This is the part a website builder hides completely, and the part that ended
-up being the real engineering story:
+This is the part a website builder does for you, and it turned out to be the most interesting engineering in the project:
 
-- **Git-based CI/CD**: pushed to GitHub, connected the repo to Cloudflare so
-  every `git push` to `main` triggers a fresh Hugo build and redeploy — no
-  manual upload step, ever.
-- **Landed mid-migration**: Cloudflare was actively folding Pages into Workers
-  while I was setting this up, so the dashboard didn't match the docs. Fixed it
-  by adding a `wrangler.jsonc` pointing at the Hugo output directory so the new
-  Workers-based static-asset deploy path picked it up correctly.
-- **Free domain, real DNS**: registered `sophianawasreh.dpdns.org` through
-  DigitalPlat, delegated it to Cloudflare via external nameservers (not
-  DigitalPlat's own DNS), and waited out real-world nameserver propagation
-  rather than assuming it "just works."
+- **Git-based deploys.** The repository is connected to Cloudflare, so every push to `main` triggers a fresh Hugo build and redeploy. There is no manual upload step anywhere in the process.
+- **A platform migration mid-setup.** Cloudflare was in the middle of folding Pages into Workers while I was configuring this, so the dashboard did not match the documentation and the build kept producing a site with nothing in it. What fixed it was adding a `wrangler.jsonc` pointing at Hugo's output directory, which is what the new Workers static-asset path reads.
+- **Real DNS on a free domain.** `sophianawasreh.dpdns.org` is registered through DigitalPlat and delegated to Cloudflare with external nameservers rather than DigitalPlat's own DNS, which meant waiting out actual nameserver propagation instead of assuming it had worked.
 
-## The takeaway
-
-Anyone can point a builder at a domain and click publish. This is what it
-looks like to own every layer instead: the templates, the git history, the
-DNS, and the platform's own moving target — and to debug each one for real
-when it didn't work on the first try.
+None of that is complicated once you know it. It was worth doing because it is the layer I would otherwise have been guessing about, and now I am not.
