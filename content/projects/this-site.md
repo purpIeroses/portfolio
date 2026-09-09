@@ -1,6 +1,6 @@
 ---
 title: "This Site"
-weight: 5
+weight: 6
 discipline: "Full-stack / Infra"
 summary: "The portfolio you're looking at right now — built in Hugo, not assembled in a drag-and-drop builder, and deployed through a live platform migration."
 platform: "Hugo (static site generator)"

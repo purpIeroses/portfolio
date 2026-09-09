@@ -1,6 +1,6 @@
 ---
 title: "Parsel"
-weight: 3
+weight: 4
 discipline: "AI Integration"
 summary: "Paste messy text, get clean structured data — every time. Custom schemas, per-field confidence and exports, built around the hard part: making model output trustworthy."
 platform: "Bolt.new"

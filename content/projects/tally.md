@@ -1,6 +1,6 @@
 ---
 title: "Tally"
-weight: 2
+weight: 3
 discipline: "Full-stack / Auth"
 summary: "A polished landing page with a real, secured product behind it — clients, invoices, PDFs and email, on a gated dashboard where users only ever see their own data."
 platform: "Lovable"

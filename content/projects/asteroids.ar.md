@@ -1,6 +1,6 @@
 ---
 title: "Asteroids"
-weight: 1
+weight: 2
 discipline: "تفاعلي / لعبة"
 summary: "نسخة أمينة من لعبة أركيد متجهية (vector) مزوّدة بلوحة صدارة عالمية حقيقية — أُنشئت لإثبات قدرتي على إطلاق عمل تفاعلي وتأمين ما خلفه من نظام خلفي."
 platform: "Vanilla JS + Canvas"

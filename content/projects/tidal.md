@@ -1,6 +1,6 @@
 ---
 title: "Tidal"
-weight: 4
+weight: 5
 discipline: "Design / Front-end"
 summary: "A type specimen where the concept and the interaction are the same thing: drag a 'depth' axis — or just scroll — and the letterforms sink underwater."
 platform: "v0"

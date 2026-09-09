@@ -1,6 +1,6 @@
 ---
 title: "Asteroids"
-weight: 1
+weight: 2
 discipline: "Interactive / Game"
 summary: "A faithful vector arcade clone with a real global leaderboard — built to prove I can ship interactive work and secure the backend behind it."
 platform: "Vanilla JS + Canvas"

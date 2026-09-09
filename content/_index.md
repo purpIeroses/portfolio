@@ -2,7 +2,7 @@
 title: "Home"
 hero_eyebrow: "FREELANCE BUILDER"
 work_title: "Selected work"
-work_blurb: "Four builds, four different problems. Each one shipped, then hardened."
+work_blurb: "Five builds, five different problems. Each one shipped, then hardened."
 about_title: "How I work"
 ---
 
