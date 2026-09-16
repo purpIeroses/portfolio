@@ -43,7 +43,7 @@ Giving each code its own path had a second effect I did not plan and am glad of.
   <figcaption>The English card address and the Spanish one. The toggle in the corner switches by hand; the card decides which language you land in.</figcaption>
 </figure>
 
-I wrote the Spanish for Miami rather than translating it phrase by phrase, which is a different job and one I would rather have checked than be confident about.
+The Spanish is not mine. I do not speak it, so it is generated, aimed at the Latin American Spanish that Miami actually speaks rather than translated phrase by phrase. That distinction matters for how it lands on somebody standing in the lobby, and it is also the part of this project I can vouch for least, because I am not in a position to check the result myself.
 
 ## The photos and the card
 
@@ -83,4 +83,4 @@ The rates table is maintained by hand, so it will go out of date the first time 
 
 The photo viewer swipes and takes arrow keys, but it does not preload the photo either side of the one you are looking at, so on a weak connection a swipe shows an empty frame for a moment.
 
-And I would like a native speaker who lives in Miami to read the Spanish before the next batch of cards goes out. It reads well to me, which is not the same as being right.
+And the Spanish needs a native speaker in Miami to read it before the next batch of cards goes out. Since I cannot judge it myself, that is the one thing on this list I would not leave sitting.
