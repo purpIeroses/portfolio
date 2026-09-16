@@ -3,7 +3,7 @@ title: "Residence 724"
 weight: 2
 discipline: "Client Work / Web + Print"
 summary: "A one-page site for a furnished studio in Midtown Miami, in English and Spanish, with front-desk business cards whose two QR codes each open the page in their own language."
-platform: "Static HTML/CSS/JS"
+platform: "Static HTML/CSS/JS, built with Claude Code"
 stack: "HTML, CSS, vanilla JS, Cloudflare Pages, Cloudflare Registrar, GitHub, ffmpeg, Python (Pillow, segno)"
 demo: "https://miamistandard724.com"
 demo_label: "Visit miamistandard724.com →"

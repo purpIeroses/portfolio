@@ -3,7 +3,7 @@ title: "Qalami"
 weight: 1
 discipline: "AI Product / Education"
 summary: "A marking assistant for teachers, in Arabic and English. It reads handwritten schoolwork and drafts a mark, and then it stops, because the database will not let a mark be finalised by anything other than a teacher."
-platform: "Next.js + Claude API"
+platform: "Next.js + Claude API, built with Claude Code"
 stack: "Next.js 16, React 19, Supabase (Postgres, Auth, Row Level Security, Storage), Claude API, TypeScript"
 demo: "https://qalamiapp.com"
 demo_label: "Visit qalamiapp.com →"

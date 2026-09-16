@@ -3,7 +3,7 @@ title: "Asteroids"
 weight: 3
 discipline: "تفاعلي / لعبة"
 summary: "إعادة بناء للعبة الأركيد الصادرة عام 1979 بغير محرّك ألعاب خلفها، مع جدول نتائج عالمي لا تسمح قاعدة البيانات نفسها بتزييفه."
-platform: "Vanilla JS + Canvas"
+platform: "Vanilla JS + Canvas، بُنيت بـ Claude Code"
 stack: "HTML5 Canvas, ES modules, Supabase (Postgres + RLS)"
 demo: "/games/asteroids/"
 repo: ""

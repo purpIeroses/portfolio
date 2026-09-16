@@ -3,7 +3,7 @@ title: "Residence 724"
 weight: 2
 discipline: "عمل لعميل / ويب وطباعة"
 summary: "صفحة واحدة لاستوديو مفروش في Midtown Miami، بالإنجليزية والإسبانية، مع بطاقات عمل في مكتب الاستقبال يفتح كل رمز QR فيها الصفحة بلغته."
-platform: "HTML وCSS وJavaScript خالصة"
+platform: "Static HTML/CSS/JS، بُنيت بـ Claude Code"
 stack: "HTML, CSS, vanilla JS, Cloudflare Pages, Cloudflare Registrar, GitHub, ffmpeg, Python (Pillow, segno)"
 demo: "https://miamistandard724.com"
 demo_label: "زُر miamistandard724.com ←"

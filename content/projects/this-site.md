@@ -3,7 +3,7 @@ title: "This Site"
 weight: 7
 discipline: "Full-stack / Infra"
 summary: "The portfolio you are reading — a Hugo project with its own templates and CSS rather than a marketplace theme, bilingual in Arabic and English, deployed through a platform migration that happened underneath me."
-platform: "Hugo (static site generator)"
+platform: "Hugo (static site generator), built with Claude Code"
 stack: "Hugo + Go templates, Cloudflare Workers (static assets), GitHub, DigitalPlat free domain"
 demo: "https://sophianawasreh.dpdns.org/"
 demo_label: "You're looking at it!"

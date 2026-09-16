@@ -3,7 +3,7 @@ title: "Asteroids"
 weight: 3
 discipline: "Interactive / Game"
 summary: "A rebuild of the 1979 arcade game with no game engine behind it, and a global high-score table that the database itself won't let anyone fake."
-platform: "Vanilla JS + Canvas"
+platform: "Vanilla JS + Canvas, built with Claude Code"
 stack: "HTML5 Canvas, ES modules, Supabase (Postgres + RLS)"
 demo: "/games/asteroids/"
 repo: ""   # paste your repo URL

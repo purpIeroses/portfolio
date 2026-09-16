@@ -3,7 +3,7 @@ title: "قلمي"
 weight: 1
 discipline: "منتج ذكاء اصطناعي / تعليم"
 summary: "مساعد تصحيح للمعلّمين، بالعربية والإنجليزية. يقرأ أوراق الطلاب المكتوبة بخط اليد ويكتب الدرجة مسودة، ثم يتوقف، لأن قاعدة البيانات لا تسمح لغير معلّم باعتماد درجة نهائيًا."
-platform: "Next.js + Claude API"
+platform: "Next.js + Claude API، بُني بـ Claude Code"
 stack: "Next.js 16, React 19, Supabase (Postgres, Auth, Row Level Security, Storage), Claude API, TypeScript"
 demo: "https://qalamiapp.com"
 demo_label: "زُر qalamiapp.com ←"
