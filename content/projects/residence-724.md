@@ -3,7 +3,7 @@ title: "Residence 724"
 weight: 2
 discipline: "Client Work / Web + Print"
 summary: "A one-page site for a furnished studio in Midtown Miami, in English and Spanish, with front-desk business cards whose two QR codes each open the page in their own language."
-platform: "Hand-written HTML/CSS/JS"
+platform: "Static HTML/CSS/JS"
 stack: "HTML, CSS, vanilla JS, Cloudflare Pages, Cloudflare Registrar, GitHub, ffmpeg, Python (Pillow, segno)"
 demo: "https://miamistandard724.com"
 demo_label: "Visit miamistandard724.com →"
@@ -26,7 +26,7 @@ It runs in English and in Spanish, because a good share of the people renting in
 
 ## Why I built it this way
 
-Hand-written HTML, CSS and JavaScript, no framework and no build step, which is less a purist position than a reading of where the page gets opened. Whoever scans that code is standing up, on whatever signal a lift lobby has, and has half decided already to put their phone away. The page and all eighteen photos come to about 1.2 MB, and nothing has to start up before the first one appears.
+Coded in plain HTML, CSS and JavaScript, with no framework and no build step, which is less a purist position than a reading of where the page gets opened. Whoever scans that code is standing up, on whatever signal a lift lobby has, and has half decided already to put their phone away. The page and all eighteen photos come to about 1.2 MB, and nothing has to start up before the first one appears.
 
 The look is borrowed from the building itself, which is cheerfully 1970s Miami, all bold reds and yellows, arched openings and a fat retro serif. I took that and did not take the logo, and the footer says plainly that this is a privately owned unit and not the building's own page, because the owner is renting his apartment, not running the leasing office.
 

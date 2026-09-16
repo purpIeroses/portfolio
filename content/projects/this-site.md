@@ -2,7 +2,7 @@
 title: "This Site"
 weight: 7
 discipline: "Full-stack / Infra"
-summary: "The portfolio you are reading — a Hugo project with hand-written templates and CSS, bilingual in Arabic and English, deployed through a platform migration that happened underneath me."
+summary: "The portfolio you are reading — a Hugo project with its own templates and CSS rather than a marketplace theme, bilingual in Arabic and English, deployed through a platform migration that happened underneath me."
 platform: "Hugo (static site generator)"
 stack: "Hugo + Go templates, Cloudflare Workers (static assets), GitHub, DigitalPlat free domain"
 demo: "https://sophianawasreh.dpdns.org/"
@@ -12,7 +12,7 @@ repo: "https://github.com/purpIeroses/portfolio"
 
 ## What it is
 
-This case study is the site itself. There is no Squarespace, no Webflow and no theme from a marketplace: it is a Hugo project with layouts I wrote, a homepage and case-study template built on Hugo's Go templating, and CSS written from scratch. The other projects show what I can build. This one is the part that usually stays hidden, which is how I get something built onto a domain and keep it there.
+This case study is the site itself. There is no Squarespace, no Webflow and no theme from a marketplace: it is a Hugo project with its own layouts, a homepage and case-study template built on Hugo's Go templating, and CSS written for this site alone. The other projects show what I can build. This one is the part that usually stays hidden, which is how I get something built onto a domain and keep it there.
 
 It is also bilingual. Every page exists in English and Arabic, the Arabic version runs right-to-left, and each language has its own metadata and link preview image rather than sharing the English one.
 
@@ -22,7 +22,7 @@ Saying "I can deploy things" is easy and does not tell you much. Pointing at the
 
 ## The build
 
-I chose Hugo over a JavaScript framework because a portfolio is content rather than an application. Static generation means there is no client-side routing to go wrong, nothing to hydrate, and a build fast enough that I can change a line and see it immediately. The homepage and case-study templates are my own `baseof`, `single` and `index` layouts rather than a downloaded theme, so the hero, the work grid and the about section are laid out exactly the way I wanted them.
+I chose Hugo over a JavaScript framework because a portfolio is content rather than an application. Static generation means there is no client-side routing to go wrong, nothing to hydrate, and a build fast enough that I can change a line and see it immediately. The homepage and case-study templates are this project's own `baseof`, `single` and `index` layouts rather than a downloaded theme, so the hero, the work grid and the about section are laid out exactly the way I wanted them.
 
 ## The deploy
 

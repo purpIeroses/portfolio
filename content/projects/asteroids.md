@@ -2,7 +2,7 @@
 title: "Asteroids"
 weight: 3
 discipline: "Interactive / Game"
-summary: "A from-scratch rebuild of the 1979 arcade game, with a global high-score table that the database itself won't let anyone fake."
+summary: "A rebuild of the 1979 arcade game with no game engine behind it, and a global high-score table that the database itself won't let anyone fake."
 platform: "Vanilla JS + Canvas"
 stack: "HTML5 Canvas, ES modules, Supabase (Postgres + RLS)"
 demo: "/games/asteroids/"
@@ -18,7 +18,7 @@ card_image: "images/asteroids-hero.png"
 
 ## What it is
 
-A rebuild of the 1979 arcade game, written from scratch in plain JavaScript against an HTML5 canvas. The ship is drawn as vectors and thrusts with real inertia, so it keeps drifting after you stop pushing. Everything wraps around the edges of the screen, asteroids break into smaller asteroids when you shoot them, and hyperspace drops you somewhere random. The screen shakes when something explodes, the debris is a particle burst, and there are no audio files anywhere in the project — every sound is generated in code by the browser as it plays. Behind the game there is a global high-score table saving to a real Postgres database.
+A rebuild of the 1979 arcade game, built in plain JavaScript against an HTML5 canvas, with no game engine or physics library. The ship is drawn as vectors and thrusts with real inertia, so it keeps drifting after you stop pushing. Everything wraps around the edges of the screen, asteroids break into smaller asteroids when you shoot them, and hyperspace drops you somewhere random. The screen shakes when something explodes, the debris is a particle burst, and there are no audio files anywhere in the project — every sound is generated in code by the browser as it plays. Behind the game there is a global high-score table saving to a real Postgres database.
 
 ## Why I started here
 
