@@ -1,6 +1,6 @@
 ---
 title: "Tidal"
-weight: 5
+weight: 6
 discipline: "Design / Front-end"
 summary: "A type specimen for an invented typeface whose main axis is depth rather than weight. Drag the slider, or just scroll, and the letterforms sink underwater."
 platform: "v0"

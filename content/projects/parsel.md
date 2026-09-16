@@ -1,6 +1,6 @@
 ---
 title: "Parsel"
-weight: 4
+weight: 5
 discipline: "AI Integration"
 summary: "Paste a messy job posting, get back clean structured data with a confidence reading on every field — built around the part that is actually difficult, which is making model output safe to display."
 platform: "Bolt.new"

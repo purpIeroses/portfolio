@@ -1,6 +1,6 @@
 ---
 title: "Asteroids"
-weight: 2
+weight: 3
 discipline: "Interactive / Game"
 summary: "A from-scratch rebuild of the 1979 arcade game, with a global high-score table that the database itself won't let anyone fake."
 platform: "Vanilla JS + Canvas"

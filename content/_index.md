@@ -2,7 +2,7 @@
 title: "Home"
 hero_eyebrow: "FREELANCE BUILDER"
 work_title: "Selected work"
-work_blurb: "Six projects. One of them is a live product I'm still working on; the others I built to show one particular thing each."
+work_blurb: "Seven projects. One is a live product I'm still working on, one was built for a paying client, and the rest I built to show one particular thing each."
 about_title: "How I work"
 ---
 

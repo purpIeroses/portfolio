@@ -1,6 +1,6 @@
 ---
 title: "Asteroids"
-weight: 2
+weight: 3
 discipline: "تفاعلي / لعبة"
 summary: "إعادة بناء من الصفر للعبة الأركيد الصادرة عام 1979، مع جدول نتائج عالمي لا تسمح قاعدة البيانات نفسها بتزييفه."
 platform: "Vanilla JS + Canvas"

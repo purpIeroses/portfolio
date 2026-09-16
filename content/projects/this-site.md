@@ -1,6 +1,6 @@
 ---
 title: "This Site"
-weight: 6
+weight: 7
 discipline: "Full-stack / Infra"
 summary: "The portfolio you are reading — a Hugo project with hand-written templates and CSS, bilingual in Arabic and English, deployed through a platform migration that happened underneath me."
 platform: "Hugo (static site generator)"

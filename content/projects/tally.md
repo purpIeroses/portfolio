@@ -1,6 +1,6 @@
 ---
 title: "Tally"
-weight: 3
+weight: 4
 discipline: "Full-stack / Auth"
 summary: "An invoicing tool with clients, PDFs and email behind a real login — where the rule that you only see your own invoices lives in the database, not in the interface."
 platform: "Lovable"
