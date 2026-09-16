@@ -12,8 +12,9 @@ Thumbs.db
 # Node (only if you add JS tooling)
 node_modules/
 
-# Claude Code local settings
-.claude/settings.local.json
+# Claude Code local config — settings, the dev-server launch entries and the
+# writing guide. Working notes, not site content, so none of it is pushed.
+.claude/
 
 # Wrangler local state (contains account info)
 .wrangler/
@@ -21,6 +22,5 @@ node_modules/
 # Working assets, not part of the site
 /reference assets/
 
-# Local writing guide, not part of the site
-.claude/voice.md
+# Local writing guide, not part of the site (.claude/voice.md is covered above)
 CLAUDE.md
