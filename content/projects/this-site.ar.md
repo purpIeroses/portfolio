@@ -5,7 +5,7 @@ discipline: "تطوير شامل / بنية تحتية"
 summary: "الملف الشخصي الذي تقرأه الآن: مشروع Hugo بقوالب وCSS خاصة به لا قالبًا جاهزًا من سوق قوالب، ثنائي اللغة بالعربية والإنجليزية، ومنشور عبر عملية ترحيل منصة جرت تحت قدميّ أثناء الإعداد."
 platform: "Hugo (static site generator)، بُني بـ Claude Code"
 stack: "Hugo + Go templates, Cloudflare Workers (static assets), GitHub, DigitalPlat free domain"
-demo: "https://sophianawasreh.dpdns.org/"
+demo: "https://alnawasreh.dev/"
 demo_label: "أنت تنظر إليه الآن!"
 repo: "https://github.com/purpIeroses/portfolio"
 ---

@@ -5,5 +5,12 @@
   "assets": {
     "directory": "public",
     "binding": "ASSETS"
-  }
+  },
+  // The old domain stays attached so existing links keep working; the Worker
+  // 301s it to the apex. www redirects via a zone rule, not the Worker.
+  // Deploys sync custom domains to this list, so removing one here detaches it.
+  "routes": [
+    { "pattern": "alnawasreh.dev", "custom_domain": true },
+    { "pattern": "sophianawasreh.dpdns.org", "custom_domain": true }
+  ]
 }

@@ -1,4 +1,4 @@
-baseURL = "https://sophianawasreh.dpdns.org/"
+baseURL = "https://alnawasreh.dev/"
 locale = "en-us"
 title = "Sophia Al-Nawasreh — Builder"
 enableRobotsTXT = true
@@ -13,7 +13,7 @@ defaultContentLanguageInSubdir = false
 
 [params]
   author = "Sophia Al-Nawasreh"
-  email = "sophiaalnawasreh@gmail.com"
+  email = "sophia@alnawasreh.dev"
 
 [languages]
   [languages.en]

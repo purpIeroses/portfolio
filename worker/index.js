@@ -1,9 +1,20 @@
-const CONTACT_EMAIL = "sophiaalnawasreh@gmail.com";
+const CONTACT_EMAIL = "sophia@alnawasreh.dev";
+// Resend only sends from domains verified in the Resend dashboard.
+const FROM_EMAIL = "Portfolio Contact <contact@alnawasreh.dev>";
+const CANONICAL_HOST = "alnawasreh.dev";
+const REDIRECT_HOSTS = new Set(["sophianawasreh.dpdns.org"]);
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
 export default {
   async fetch(request, env) {
     const url = new URL(request.url);
+
+    // The old domain redirects to the apex, keeping path and query.
+    if (REDIRECT_HOSTS.has(url.hostname)) {
+      url.hostname = CANONICAL_HOST;
+      url.protocol = "https:";
+      return Response.redirect(url.toString(), 301);
+    }
 
     if (url.pathname === "/api/contact" && request.method === "POST") {
       return handleContact(request, env);
@@ -46,7 +57,7 @@ async function handleContact(request, env) {
       "Content-Type": "application/json",
     },
     body: JSON.stringify({
-      from: "Portfolio Contact <onboarding@resend.dev>",
+      from: FROM_EMAIL,
       to: CONTACT_EMAIL,
       reply_to: email,
       subject: `New project inquiry from ${name}`,
