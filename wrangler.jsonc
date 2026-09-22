@@ -4,7 +4,10 @@
   "main": "worker/index.js",
   "assets": {
     "directory": "public",
-    "binding": "ASSETS"
+    "binding": "ASSETS",
+    // Matching assets are otherwise served before the Worker runs, which
+    // would skip the old-domain redirect.
+    "run_worker_first": true
   },
   // The old domain stays attached so existing links keep working; the Worker
   // 301s it to the apex. www redirects via a zone rule, not the Worker.
