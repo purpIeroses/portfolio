@@ -39,6 +39,11 @@ So Qalami never publishes a mark. It drafts one, shows what it read off the page
 
 The part I am most pleased with is where that rule is kept. It is not a convention in the interface, where a later refactor could quietly drop it — it is in the database. A paper moves through draft, ready, grading, review and finalized, and only a teacher can perform that last transition. The schema says so in its own comment: **"Nothing is finalized without a teacher."** Each individual criterion carries its own status as well, pending, accepted or adjusted, so a teacher's read-through leaves a record of what they actually looked at instead of collapsing into a single approve button.
 
+<figure class="case-figure">
+  <img src="/images/qalami-report-image.webp" alt="Qalami's review screen for one paper: the pupil's handwritten essay on the left, and on the right the draft mark for each criterion, each labelled pending with Accept and Change mark buttons beside it. Above them sits a note on what was hard to read, and at the bottom an Approve this piece button with the line: Nothing is final until you approve it." loading="lazy">
+  <figcaption>The review screen for one paper. Every criterion waits as pending until the teacher accepts or changes it, and the note at the top says which words could not be read and what was set aside rather than counted as a mistake. The pupil is a test account.</figcaption>
+</figure>
+
 Two smaller decisions came out of the same thinking. The marking says when it is unsure and points at the specific answers it is unsure about, so a teacher's attention goes where the risk is rather than being spread evenly across a stack of pages. And the ninety-day clock that erases pupils' scans is started by a database trigger rather than by the application, because anything the application can set, a bug in the application can also set, and that would mean either deleting a child's work early or keeping it indefinitely.
 
 ## What I caught
